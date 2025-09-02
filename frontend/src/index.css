@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CRYPTO TRADING SYSTEM - ELEGANT SOFT DESIGN SYSTEM */
+
+@layer base {
+  :root {
+    /* Base colors - Soft and elegant */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 20%;
+    
+    --surface: 0 0% 100%;
+    --surface-hover: 210 20% 96%;
+    --surface-muted: 210 15% 97%;
+    
+    /* Card and popover */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    /* Primary brand colors */
+    --primary: 220 15% 20%;
+    --primary-foreground: 0 0% 98%;
+    --primary-soft: 220 15% 25%;
+
+    /* Secondary colors */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 15% 20%;
+
+    /* Muted colors */
+    --muted: 210 15% 97%;
+    --muted-foreground: 215 15% 50%;
+
+    /* Accent colors */
+    --accent: 210 20% 96%;
+    --accent-foreground: 220 15% 20%;
+
+    /* Status colors - Soft variants */
+    --success: 160 80% 40%;
+    --success-light: 160 60% 95%;
+    --success-soft: 160 40% 50%;
+    
+    --danger: 355 75% 55%;
+    --danger-light: 355 100% 97%;
+    --danger-soft: 355 50% 60%;
+    
+    --warning: 35 85% 55%;
+    --warning-light: 35 100% 95%;
+    --warning-soft: 35 70% 60%;
+    
+    --info: 220 90% 60%;
+    --info-light: 220 100% 97%;
+    --info-soft: 220 70% 70%;
+
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 15% 20%;
+
+    /* Gradients */
+    --gradient-profit: linear-gradient(135deg, hsl(160 80% 40%) 0%, hsl(160 70% 45%) 100%);
+    --gradient-loss: linear-gradient(135deg, hsl(355 75% 55%) 0%, hsl(355 65% 60%) 100%);
+    --gradient-header: linear-gradient(135deg, hsl(220 15% 20%) 0%, hsl(220 15% 25%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(220 15% 20% / 0.1);
+    --shadow-card: 0 4px 12px -4px hsl(220 15% 20% / 0.15);
+    --shadow-elevated: 0 8px 24px -8px hsl(220 15% 20% / 0.2);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Card variants */
+  .card-soft {
+    @apply bg-gradient-to-br from-white to-slate-50 shadow-sm border border-border;
+  }
+  
+  .card-elevated {
+    @apply bg-white shadow-md border border-border;
+  }
+  
+  /* Status badges */
+  .badge-success {
+    @apply bg-green-50 text-green-700 border border-green-200;
+  }
+  
+  .badge-danger {
+    @apply bg-red-50 text-red-700 border border-red-200;
+  }
+  
+  .badge-warning {
+    @apply bg-orange-50 text-orange-700 border border-orange-200;
+  }
+  
+  .badge-info {
+    @apply bg-blue-50 text-blue-700 border border-blue-200;
+  }
+  
+  /* Progress bars */
+  .progress-success {
+    @apply bg-green-200 text-green-800;
+  }
+  
+  .progress-warning {
+    @apply bg-orange-200 text-orange-800;
+  }
+  
+  .progress-danger {
+    @apply bg-red-200 text-red-800;
+  }
+  
+  /* Crypto-specific styles */
+  .crypto-price {
+    @apply font-mono font-semibold;
+  }
+  
+  .crypto-percentage {
+    @apply font-mono text-sm;
+  }
+  
+  .pulse-success {
+    @apply animate-pulse bg-green-100 border-green-300;
+  }
+  
+  .pulse-danger {
+    @apply animate-pulse bg-red-100 border-red-300;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-lift {
+    @apply hover:shadow-lg hover:-translate-y-0.5 transition-smooth;
+  }
+  
+  .text-gradient-profit {
+    background: var(--gradient-profit);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-loss {
+    background: var(--gradient-loss);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
